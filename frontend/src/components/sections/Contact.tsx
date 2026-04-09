@@ -5,18 +5,39 @@ import { Send, CheckCircle, Mail } from 'lucide-react';
 export default function Contact() {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // We do NOT prevent default so it submits natively to the hidden_iframe.
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const form = e.currentTarget;
     setFormState('submitting');
+    
+    // Package form data explicitly
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-    setTimeout(() => {
-      setFormState('success');
-      setTimeout(() => {
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/akhiln8137@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+      if (response.ok) {
+        setFormState('success');
+        setTimeout(() => {
+          setFormState('idle');
+          form.reset();
+        }, 3000);
+      } else {
         setFormState('idle');
-        form.reset();
-      }, 3000);
-    }, 1500);
+        alert("There was an error communicating with the server. Please try again.");
+      }
+    } catch (error) {
+      setFormState('idle');
+      alert("Network error occurred. Please check your internet connection.");
+    }
   };
 
   return (
@@ -76,8 +97,7 @@ export default function Contact() {
           {/* Subtle Form Spotlight */}
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-aurora-2 blur-[100px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2 opacity-30" />
 
-          <iframe name="hidden_iframe" id="hidden_iframe" style={{ display: 'none' }} />
-          <form action="https://formsubmit.co/akhiln8137@gmail.com" method="POST" target="hidden_iframe" onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
             
             {/* Disable FormSubmit Captcha for silent iframe execution */}
             <input type="hidden" name="_captcha" value="false" />

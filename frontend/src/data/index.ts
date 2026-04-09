@@ -6,6 +6,7 @@ export interface Project {
   tech: string[];
   image: string;
   link?: string;
+  github?: string;
   featured: boolean;
 }
 
@@ -19,6 +20,7 @@ export const PORTFOLIO_DATA = {
       tech: ["React", "TypeScript", "Tailwind CSS"],
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
       link: "https://example.com/alpha",
+      github: "https://github.com/akhiln2003/alpha",
       featured: true
     },
     {
@@ -29,6 +31,7 @@ export const PORTFOLIO_DATA = {
       tech: ["Next.js", "Framer Motion", "GSAP"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
       link: "https://example.com/beta",
+      github: "https://github.com/akhiln2003/beta",
       featured: true
     }
   ] as Project[]

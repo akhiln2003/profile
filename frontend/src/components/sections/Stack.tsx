@@ -3,36 +3,36 @@ import { Layers, Database, Lock, Cpu, Globe2, Code2 } from 'lucide-react';
 
 const bentoItems = [
   {
-    title: 'Frontend Architecture',
-    desc: 'Creating fluid, responsive, and complex user interfaces.',
-    skills: ['React', 'Next.js', 'Tailwind', 'Framer Motion', 'Three.js'],
+    title: 'Backend Systems',
+    desc: 'Servers, databases, message queues, and real-time communications.',
+    skills: ['Node.js', 'Express.js', 'TypeORM', 'PostgreSQL', 'MongoDB', 'Redis', 'gRPC', 'WebSocket', 'Kafka'],
     colSpan: 'col-span-1 md:col-span-2',
     rowSpan: 'row-span-1',
     gradient: 'from-aurora-2 to-aurora-1',
-    icon: Globe2
-  },
-  {
-    title: 'Backend Systems',
-    desc: 'Scalable and highly available microservices.',
-    skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL'],
-    colSpan: 'col-span-1 md:col-span-1',
-    rowSpan: 'row-span-1',
-    gradient: 'from-aurora-1 to-aurora-3',
     icon: Database
   },
   {
-    title: 'Infrastructure & Ops',
-    desc: 'Containerization, orchestration, and CI/CD pipelines.',
-    skills: ['Docker', 'AWS EKS', 'Kafka', 'K8s', 'GitHub Actions'],
+    title: 'Frontend Architecture',
+    desc: 'Creating fluid, responsive, and complex user interfaces.',
+    skills: ['React.js', 'Redux', 'Tailwind CSS', 'ShadCN', 'HTML5 / CSS3', 'EJS'],
     colSpan: 'col-span-1 md:col-span-1',
-    rowSpan: 'row-span-2',
+    rowSpan: 'row-span-1',
+    gradient: 'from-aurora-1 to-aurora-3',
+    icon: Globe2
+  },
+  {
+    title: 'Infrastructure & Ops',
+    desc: 'Containerization, orchestration, automation, and continuous monitoring.',
+    skills: ['Docker', 'Kubernetes', 'AWS', 'NGINX', 'Helm', 'ELK Stack', 'GitHub Actions'],
+    colSpan: 'col-span-1 md:col-span-1',
+    rowSpan: 'row-span-1',
     gradient: 'from-aurora-3 to-aurora-2',
     icon: Cpu
   },
   {
-    title: 'Core Computing',
-    desc: 'Strong foundation in system design and languages.',
-    skills: ['TypeScript', 'JavaScript', 'HTML/CSS', 'Python'],
+    title: 'Core & Architecture',
+    desc: 'Languages, system design patterns, and testing methodologies.',
+    skills: ['JavaScript', 'TypeScript',  'Microservices', 'Clean Architecture', 'SOLID', 'Jest'],
     colSpan: 'col-span-1 md:col-span-2',
     rowSpan: 'row-span-1',
     gradient: 'from-white/40 to-white/10',
@@ -64,7 +64,7 @@ export default function Stack() {
         <p className="text-white/50 max-w-2xl text-lg mt-4 font-medium">Tools and technologies I use to build robust, scalable, and premium web applications.</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[280px] md:auto-rows-[320px] w-full relative z-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full relative z-20">
         {bentoItems.map((item, i) => {
           const Icon = item.icon;
           return (
@@ -74,12 +74,12 @@ export default function Stack() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className={`relative rounded-[2.5rem] p-1 flex flex-col justify-between overflow-hidden group ${item.colSpan} ${item.rowSpan}`}
+              className={`relative rounded-[2.5rem] p-1 flex flex-col justify-between overflow-hidden group min-h-[320px] md:min-h-[380px] ${item.colSpan} ${item.rowSpan}`}
             >
               {/* Animated Gradient Border */}
               <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-20 group-hover:opacity-100 transition-opacity duration-700`} />
               
-              <div className="relative h-full w-full bg-black/80 backdrop-blur-3xl rounded-[2.3rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 group-hover:border-white/10 transition-colors">
+              <div className="relative h-full w-full bg-black/80 backdrop-blur-3xl rounded-[2.3rem] p-6 md:p-8 flex flex-col justify-between border border-white/5 group-hover:border-white/10 transition-colors">
                 
                 <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-gradient-to-br from-white/10 to-transparent blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-full translate-x-1/2 -translate-y-1/2" />
 
@@ -95,7 +95,7 @@ export default function Stack() {
                   {item.skills.map((skill, j) => (
                     <span
                       key={j}
-                      className="px-4 py-2 text-[13px] font-bold bg-white/5 border border-white/10 rounded-xl text-white/80 group-hover:text-white group-hover:bg-white/10 transition-all duration-300 shadow-inner"
+                      className="px-3 py-1.5 md:px-4 md:py-2 text-[11px] md:text-[13px] font-bold bg-white/5 border border-white/10 rounded-xl text-white/80 group-hover:text-white group-hover:bg-white/10 transition-all duration-300 shadow-inner"
                     >
                       {skill}
                     </span>

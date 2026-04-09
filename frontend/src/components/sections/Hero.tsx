@@ -129,7 +129,7 @@ export default function Hero() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-6 mt-4">
-                <Link to="/about" className="group/btn relative overflow-hidden rounded-full p-[1px] w-full sm:w-auto">
+                <Link to="/projects" className="group/btn relative overflow-hidden rounded-full p-[1px] w-full sm:w-auto">
                   <span className="absolute inset-0 bg-gradient-to-r from-aurora-1 via-aurora-2 to-aurora-1 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity animate-pulse" />
                   <div className="relative bg-black/50 backdrop-blur-xl px-8 py-4 rounded-full flex items-center justify-center gap-3 transition-all">
                     <span className="font-bold tracking-wider uppercase text-sm text-white">View Projects</span>

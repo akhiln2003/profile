@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 const timeline = [
   {
     year: '2023 - Present',
-    title: 'Software Engineer Trainee',
+    title: 'MERN Stack Specialist',
     organization: 'Brototype',
-    description: 'Transitioning directly into software engineering with an intensive focus on the MERN stack. Rapidly acquiring skills in microservices architecture, containerization with Docker, and cloud orchestration via AWS.',
+    description: 'Immersed in an intensive bootcamp, mastering Full-Stack development. Focused on Microservices, Docker, and AWS EKS to build production-grade applications.',
   },
   {
     year: 'Pre - 2023',
-    title: 'Trade & Technical Foundation',
+    title: 'Technical Foundation',
     organization: 'ITI Kozhikode',
-    description: 'Mastered the fundamentals of physical and technical systems. The strict discipline and hands-on problem-solving experienced here directly translated into a methodical approach to software engineering.',
+    description: 'Mastered Electronic Mechanical systems. While this built my discipline and troubleshooting mindset, my final year sparked a pivot toward the infinite possibilities of software.',
   }
 ];
 
@@ -37,10 +37,10 @@ export default function About() {
           
           <div className="space-y-6 text-white/80 text-[16px] md:text-lg leading-relaxed font-medium">
             <p>
-              My engineering path took an unconventional but rigorous route. Starting out at <span className="text-white font-bold">ITI Kozhikode</span>, I built a hands-on foundation in technical systems.
+              My journey is unconventional. Transitioning from a Humanities background to Electronic Mechanical at <span className="text-white font-bold">ITI Kozhikode</span>, I developed a rigorous, hands-on approach to problem-solving.
             </p>
             <p>
-              At <span className="text-white font-bold">Brototype</span>, I shifted focus towards the architecture behind the code, obsessing over <span className="text-white font-bold">Microservices</span> and containerization.
+              Realizing my heart lay in code, I pivoted to Software Engineering. At <span className="text-white font-bold">Brototype</span>, I bridged the gap between hardware logic and software architecture, specializing in the MERN stack and scalable cloud systems.
             </p>
           </div>
         </motion.div>

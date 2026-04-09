@@ -8,10 +8,10 @@ const Instagram = (props: any) => <svg viewBox="0 0 24 24" fill="none" stroke="c
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/n-akhil/', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/akhiln2003', label: 'GitHub' },
+    { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100069427074477', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/akhi1.n/', label: 'Instagram' },
   ];
 
   return (
