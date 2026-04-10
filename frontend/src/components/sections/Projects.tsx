@@ -83,10 +83,9 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
       <div className={`w-full md:w-7/12 order-1 ${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'} overflow-hidden rounded-[2rem] md:rounded-[3rem] relative bg-black/50 border border-white/5 group-hover:border-white/10 transition-colors aspect-[4/3] md:aspect-[16/10]`}>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none" />
         <motion.img 
-          style={{ y: yImage }}
           src={project.image} 
           alt={project.title}
-          className="w-[120%] h-[120%] -top-[10%] -left-[10%] absolute object-cover filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          className="w-full h-full absolute inset-0 object-cover object-top filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
         />
         {/* Missing Image Fallback styling */}
         <div className="absolute inset-0 -z-10 flex flex-col gap-3 items-center justify-center text-white/30 font-bold uppercase tracking-widest text-xs p-6 text-center">

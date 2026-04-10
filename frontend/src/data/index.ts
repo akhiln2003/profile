@@ -1,3 +1,5 @@
+import eComBicycleImg from './projectIMG/eComBicycle.png';
+
 export interface Project {
   _id: string;
   title: string;
@@ -20,18 +22,18 @@ export const PORTFOLIO_DATA = {
       tech: ["React", "TypeScript", "Tailwind CSS"],
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
       link: "https://example.com/alpha",
-      github: "https://github.com/akhiln2003/alpha",
+      github: "https://github.com/akhiln2003/Buxlo-MERN-Microservice",
       featured: true
     },
     {
       _id: "2",
-      title: "Sample Project Beta",
-      type: "Mobile Experience",
+      title: "ECOM-Bicycle",
+      type: "Web Application",
       description: "An elegant mobile-first web experience. Add your own custom text and image links here.",
-      tech: ["Next.js", "Framer Motion", "GSAP"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      link: "https://example.com/beta",
-      github: "https://github.com/akhiln2003/beta",
+      tech: [ "MongoDB", "Express.js" , "EJS"],
+      image: eComBicycleImg,
+      link: "https://ecombicycle.online/",
+      github: "https://github.com/akhiln2003/ECOM-Bicycle",
       featured: true
     }
   ] as Project[]
