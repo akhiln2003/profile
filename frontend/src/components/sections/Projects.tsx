@@ -1,18 +1,19 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { PORTFOLIO_DATA } from '../../data';
+import type { Project } from '../../data';
 import { ArrowUpRight, FolderGit2 } from 'lucide-react';
 import { useRef } from 'react';
+import type { SVGProps } from 'react';
 
-const Github = (props: any) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>;
+const Github = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>;
 
-const ProjectCard = ({ project, index }: { project: any, index: number }) => {
+const ProjectCard = ({ project, index }: { project: Project, index: number }) => {
   const cardRef = useRef(null);
-  const { scrollYProgress } = useScroll({
+  useScroll({
     target: cardRef,
     offset: ["start end", "end start"]
   });
   
-  const yImage = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
     <motion.div 
@@ -72,7 +73,7 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
               rel="noopener noreferrer"
               className="group/btn relative inline-flex items-center gap-4 px-6 md:px-8 py-3 md:py-4 rounded-full border border-aurora-2/30 bg-aurora-2/5 hover:bg-aurora-2/10 backdrop-blur-md text-white overflow-hidden hover:scale-105 transition-all duration-500 hover:border-aurora-2/60"
             >
-              <Github size={16} className="text-aurora-2 group-hover/btn:scale-110 transition-transform duration-500 md:w-[18px] md:h-[18px]" />
+              <Github className="w-4 h-4 text-aurora-2 group-hover/btn:scale-110 transition-transform duration-500 md:w-[18px] md:h-[18px]" />
               <span className="font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs text-white/80 group-hover/btn:text-white transition-colors">Source Code</span>
             </a>
           )}
