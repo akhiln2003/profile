@@ -17,7 +17,7 @@ const timeline = [
 
 export default function About() {
   return (
-    <section id="about" className="min-h-screen pt-24 px-4 container mx-auto max-w-6xl relative z-10 w-full flex flex-col justify-center">
+    <section id="about" className="w-full px-4 container mx-auto max-w-6xl relative z-10 flex flex-col justify-center">
       
       <div className="neo-glass-heavy rounded-[3rem] p-8 md:p-16 lg:p-24 flex flex-col lg:flex-row gap-16 relative overflow-hidden">
         {/* Internal Glow */}

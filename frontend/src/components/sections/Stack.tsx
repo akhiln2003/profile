@@ -76,7 +76,7 @@ export default function Stack() {
   return (
     <section
       id="stack"
-      className="min-h-screen pt-24 px-4 container mx-auto max-w-6xl relative z-10 w-full flex flex-col justify-center overflow-hidden"
+      className="w-full px-4 container mx-auto max-w-6xl relative z-10 flex flex-col justify-center overflow-hidden"
     >
       {/* Background Decor */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-aurora-1/20 to-aurora-3/20 rounded-full blur-[120px] pointer-events-none" />

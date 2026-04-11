@@ -41,7 +41,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-[80vh] pt-24 px-4 container mx-auto max-w-6xl flex flex-col md:flex-row gap-16 relative z-10 items-center">
+    <section id="contact" className="w-full px-4 container mx-auto max-w-6xl flex flex-col md:flex-row gap-16 relative z-10 items-center">
       
       {/* Info Column */}
       <motion.div 

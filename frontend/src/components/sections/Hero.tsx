@@ -119,36 +119,6 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 relative z-30"
         >
-          {/* Main Intro Card */}
-          <div className="md:col-span-2 neo-glass-heavy rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-aurora-1/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
-            
-            <div className="flex flex-col h-full justify-between gap-8 relative z-10">
-              <p className="text-xl md:text-3xl font-medium leading-relaxed text-white/80 max-w-2xl">
-                Crafting high-performance <span className="text-white font-black drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">MERN</span> stack platforms & scalable architectures. I turn complex problems into fluid, premium web experiences.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center gap-6 mt-4">
-                <Link to="/projects" className="group/btn relative overflow-hidden rounded-full p-[1px] w-full sm:w-auto">
-                  <span className="absolute inset-0 bg-gradient-to-r from-aurora-1 via-aurora-2 to-aurora-1 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity animate-pulse" />
-                  <div className="relative bg-black/50 backdrop-blur-xl px-8 py-4 rounded-full flex items-center justify-center gap-3 transition-all">
-                    <span className="font-bold tracking-wider uppercase text-sm text-white">View Projects</span>
-                    <ArrowRight size={18} className="text-white group-hover/btn:translate-x-2 transition-transform duration-300" />
-                  </div>
-                </Link>
-
-                <a 
-                  href="/resume.pdf" 
-                  download 
-                  className="flex items-center justify-center gap-2 px-8 py-4 rounded-full hover:bg-white/5 transition-colors group/dl w-full sm:w-auto"
-                >
-                  <Download size={18} className="text-white/60 group-hover/dl:text-white group-hover/dl:-translate-y-1 transition-all duration-300" />
-                  <span className="font-bold tracking-wider uppercase text-sm text-white/80 group-hover/dl:text-white transition-colors">Resume</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Side Profile / Stats Card */}
           <div className="neo-glass-heavy rounded-[2.5rem] p-8 relative overflow-hidden flex flex-col justify-center items-center group min-h-[300px]">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-aurora-2)_0%,_transparent_70%)] opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none" />
@@ -169,6 +139,35 @@ export default function Hero() {
 
           </div>
 
+          {/* Main Intro Card */}
+          <div className="md:col-span-2 neo-glass-heavy rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-aurora-1/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+            
+            <div className="flex flex-col h-full justify-between gap-8 relative z-10">
+              <p className="text-xl md:text-3xl font-medium leading-relaxed text-white/80 max-w-2xl text-center md:text-left">
+                Crafting high-performance <span className="text-white font-black drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">MERN</span> stack platforms & scalable architectures. I turn complex problems into fluid, premium web experiences.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 mt-4">
+                <Link to="/projects" className="group/btn relative overflow-hidden rounded-full p-[1px] w-full sm:w-auto">
+                  <span className="absolute inset-0 bg-gradient-to-r from-aurora-1 via-aurora-2 to-aurora-1 rounded-full opacity-70 group-hover/btn:opacity-100 transition-opacity animate-pulse" />
+                  <div className="relative bg-black/50 backdrop-blur-xl px-8 py-4 rounded-full flex items-center justify-center gap-3 transition-all">
+                    <span className="font-bold tracking-wider uppercase text-sm text-white">View Projects</span>
+                    <ArrowRight size={18} className="text-white group-hover/btn:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </Link>
+
+                <a 
+                  href="/resume.pdf" 
+                  download 
+                  className="flex items-center justify-center gap-2 px-8 py-4 rounded-full hover:bg-white/5 transition-colors group/dl w-full sm:w-auto"
+                >
+                  <Download size={18} className="text-white/60 group-hover/dl:text-white group-hover/dl:-translate-y-1 transition-all duration-300" />
+                  <span className="font-bold tracking-wider uppercase text-sm text-white/80 group-hover/dl:text-white transition-colors">Resume</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
       </motion.div>

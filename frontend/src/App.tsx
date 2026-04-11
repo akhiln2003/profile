@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import Navbar from './components/layout/Navbar';
-import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Projects from './components/sections/Projects';
 import Stack from './components/sections/Stack';
@@ -19,24 +18,12 @@ function ScrollToTop() {
   return null;
 }
 
-// Landing Page includes all features
-function SinglePageLayout() {
-  return (
-    <div className="flex flex-col relative z-10 w-full overflow-hidden">
-      <Hero />
-      <div className="flex flex-col space-y-24 md:space-y-40 pb-40">
-        <About />
-        <Projects />
-        <Stack />
-        <Contact />
-      </div>
-    </div>
-  );
-}
+// Import the streamline Home component
+import Home from './components/sections/Home';
 
 // Isolated page wrappers for visual consistency
 const PageWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div className="pt-20 pb-40 relative z-10 min-h-screen w-full flex items-center justify-center">
+  <div className="pt-24 pb-24 md:pt-32 md:pb-40 relative z-10 min-h-screen w-full flex flex-col items-center justify-start overflow-x-hidden">
     {children}
   </div>
 );
@@ -93,7 +80,7 @@ export default function App() {
       
       <main className="w-full bg-transparent text-white font-sans selection:bg-white selection:text-black min-h-screen">
         <Routes>
-          <Route path="/" element={<SinglePageLayout />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
           <Route path="/stack" element={<PageWrapper><Stack /></PageWrapper>} />

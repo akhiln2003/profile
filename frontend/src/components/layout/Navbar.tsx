@@ -80,7 +80,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-4 max-h-[400px] top-24 z-40 neo-glass-heavy rounded-3xl flex flex-col items-center justify-center space-y-6 pointer-events-auto"
+            className="fixed inset-4 max-h-[400px] top-24 z-40 bg-zinc-950/95 backdrop-blur-3xl border border-white/10 rounded-3xl flex flex-col items-center justify-center space-y-6 pointer-events-auto shadow-[0_0_50px_rgba(0,0,0,0.8)]"
           >
             {navLinks.map((link, i) => (
               <motion.div key={link.name} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.05 * i }}>

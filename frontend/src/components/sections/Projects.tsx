@@ -102,7 +102,7 @@ export default function Projects() {
   const projects = PORTFOLIO_DATA.projects;
 
   return (
-    <section id="projects" className="min-h-screen pt-24 px-4 container mx-auto max-w-6xl relative z-10 w-full overflow-hidden">
+    <section id="projects" className="w-full px-4 container mx-auto max-w-6xl relative z-10 overflow-hidden">
       
       {/* Background Decor */}
       <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-aurora-2/10 rounded-full blur-[150px] pointer-events-none" />
