@@ -1,4 +1,3 @@
-import { Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import type { SVGProps } from 'react';
@@ -52,9 +51,7 @@ export default function Footer() {
 
         <div className="uppercase tracking-widest text-xs font-bold text-white/30 flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-white/5 gap-4 shadow-sm">
           <p>© {new Date().getFullYear()} Akhil N. All rights reserved.</p>
-          <p className="flex items-center gap-2 text-white/30">
-            Crafted with <Heart size={14} className="text-aurora-3" fill="currentColor" /> in India
-          </p>
+          
         </div>
       </div>
     </footer>
